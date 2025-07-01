@@ -50,7 +50,7 @@ TEST(t1, gopTest) {
 	EXPECT_EQ(6, cal.getGop(2,3));
 }
 
-TEST(conflicttest, zumzumTest) {
+TEST(t1, SumSum) {
 	Cal cal;
 	EXPECT_EQ(0, cal.getSumSum(-1, 0, 1));
 }
