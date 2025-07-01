@@ -4,7 +4,20 @@ class Cal {
 public:
 	int getSum(int a, int b) {
 		return a + b;
+  }
+  
+	int getGop(int a, int b) {
+		return a * b;
+  }
+
+	int getZegop(int a) {
+		return a * a;
+  }
+
+	int getSumSum(int operand1, int operand2, int operand3) {
+		return operand1 + operand2 + operand3;
 	}
+  
   int getZegop(int a) {
 		return a * a;
   }
@@ -30,6 +43,11 @@ TEST(conflicttest, zegoptest2) {
 	int expected = 1764;
 	int actual = cal.getZegop(42);
 	EXPECT_EQ(expected, actual);
+}
+
+TEST(t1, gopTest) {
+	Cal cal;
+	EXPECT_EQ(6, cal.getGop(2,3));
 }
 
 int main() {
