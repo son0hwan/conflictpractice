@@ -2,16 +2,36 @@
 
 class Cal {
 public:
-	// ÀÌ°÷¿¡ ÄÚµå ÀÛ¼º
+	// ì´ê³³ì— ì½”ë“œ ì‘ì„±
+	int getGop(int a, int b) {
+		return a * b;
+
+	int getZegop(int a) {
+		return a * a;
 
 	int getSumSum(int a, int b, int c) {
 		return a + b + c;
 	}
 };
 
-//Å×½ºÆ® ÄÉÀÌ½º ÀÛ¼º
-TEST(t1, t2) {
-	EXPECT_EQ(1, 1);
+//í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ì‘ì„±
+TEST(conflicttest, zegoptest1) {
+	Cal cal;
+	int expected = 9;
+	int actual = cal.getZegop(3);
+	EXPECT_EQ(expected, actual);
+}
+
+TEST(conflicttest, zegoptest2) {
+	Cal cal;
+	int expected = 1764;
+	int actual = cal.getZegop(42);
+	EXPECT_EQ(expected, actual);
+}
+
+TEST(t1, gopTest) {
+	Cal cal;
+	EXPECT_EQ(6, cal.getGop(2,3));
 }
 
 TEST(t1, SumSum) {
