@@ -4,6 +4,10 @@ class Cal {
 public:
 	// 이곳에 코드 작성
 
+	int getMinus(int a, int b) {
+		return a - b; 
+	}
+
 	int getSumSum(int operand1, int operand2, int operand3) {
 		return operand1 + operand2 + operand3;
 	}
@@ -12,6 +16,11 @@ public:
 //테스트 케이스 작성
 TEST(t1, t2) {
 	EXPECT_EQ(1, 1);
+}
+
+TEST(t1, Minus) {
+	Cal calc;
+	EXPECT_EQ(calc.getMinus(5, 3), 2);
 }
 
 TEST(t1, SumSum) {
