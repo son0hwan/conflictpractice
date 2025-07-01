@@ -20,9 +20,11 @@ public:
 		return a * a;
   }
 
-
 	int getSumSum(int operand1, int operand2, int operand3) {
 		return operand1 + operand2 + operand3;
+
+	int getSumSum(int a, int b, int c) {
+		return a + b + c;
 	}
   
   int getZegop(int a) {
@@ -74,6 +76,10 @@ TEST(t1, gopTest) {
 	EXPECT_EQ(6, cal.getGop(2,3));
 }
 
+TEST(conflicttest, sumSum) {
+	Cal cal;
+	EXPECT_EQ(0, cal.getSumSum(-1, 0, 1));
+}
 
 int main() {
 	::testing::InitGoogleMock();
