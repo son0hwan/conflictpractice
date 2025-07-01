@@ -2,17 +2,33 @@
 
 class Cal {
 public:
-	// 이곳에 코드 작성
+	int getSum(int a, int b) {
+		return a + b;
+  }
+  
 	int getGop(int a, int b) {
 		return a * b;
+  }
 
 	int getZegop(int a) {
 		return a * a;
+  }
 
 	int getSumSum(int operand1, int operand2, int operand3) {
 		return operand1 + operand2 + operand3;
 	}
+  
+  int getZegop(int a) {
+		return a * a;
+  }
 };
+
+TEST(conflicttest, TC_SUM) {
+	Cal* cal = new Cal();
+	int expect = 5;
+	int actual = cal->getSum(2, 3);
+	EXPECT_EQ(expect, actual);
+}
 
 //테스트 케이스 작성
 TEST(conflicttest, zegoptest1) {
