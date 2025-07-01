@@ -2,18 +2,34 @@
 
 class Cal {
 public:
-	// ÀÌ°÷¿¡ ÄÚµå ÀÛ¼º
 	int getSum(int a, int b) {
 		return a + b;
 	}
+  int getZegop(int a) {
+		return a * a;
+  }
 };
 
-//Å×½ºÆ® ÄÉÀÌ½º ÀÛ¼º
-TEST(CALCULATOR, TC_SUM) {
+TEST(conflicttest, TC_SUM) {
 	Cal* cal = new Cal();
 	int expect = 5;
 	int actual = cal->getSum(2, 3);
 	EXPECT_EQ(expect, actual);
+}
+
+//í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ì‘ì„±
+TEST(conflicttest, zegoptest1) {
+	Cal cal;
+	int expected = 9;
+	int actual = cal.getZegop(3);
+	EXPECT_EQ(expected, actual);
+}
+
+TEST(conflicttest, zegoptest2) {
+	Cal cal;
+	int expected = 1764;
+	int actual = cal.getZegop(42);
+	EXPECT_EQ(expected, actual);
 }
 
 int main() {
