@@ -8,15 +8,33 @@ public:
 		return a - b; 
 	}
 
+	int getZegop(int a) {
+		return a * a;
+
+
 	int getSumSum(int operand1, int operand2, int operand3) {
 		return operand1 + operand2 + operand3;
 	}
-
 };
 
 //테스트 케이스 작성
 TEST(t1, t2) {
 	EXPECT_EQ(1, 1);
+};
+
+//테스트 케이스 작성
+TEST(conflicttest, zegoptest1) {
+	Cal cal;
+	int expected = 9;
+	int actual = cal.getZegop(3);
+	EXPECT_EQ(expected, actual);
+}
+
+TEST(conflicttest, zegoptest2) {
+	Cal cal;
+	int expected = 1764;
+	int actual = cal.getZegop(42);
+	EXPECT_EQ(expected, actual);
 }
 
 
