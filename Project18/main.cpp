@@ -3,11 +3,20 @@
 class Cal {
 public:
 	// 이곳에 코드 작성
+
+	int getSumSum(int a, int b, int c) {
+		return a + b + c;
+	}
 };
 
 //테스트 케이스 작성
 TEST(t1, t2) {
 	EXPECT_EQ(1, 1);
+}
+
+TEST(t1, SumSum) {
+	Cal cal;
+	EXPECT_EQ(0, cal.getSumSum(-1, 0, 1));
 }
 
 int main() {
