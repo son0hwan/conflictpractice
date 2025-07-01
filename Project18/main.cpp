@@ -2,7 +2,7 @@
 
 class Cal {
 public:
-	// ÀÌ°÷¿¡ ÄÚµå ÀÛ¼º
+	// ì´ê³³ì— ì½”ë“œ ì‘ì„±
 
 	int getMinus(int a, int b) {
 		return a - b; 
@@ -11,12 +11,14 @@ public:
 	int getSumSum(int operand1, int operand2, int operand3) {
 		return operand1 + operand2 + operand3;
 	}
+
 };
 
-//Å×½ºÆ® ÄÉÀÌ½º ÀÛ¼º
+//í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ì‘ì„±
 TEST(t1, t2) {
 	EXPECT_EQ(1, 1);
 }
+
 
 TEST(t1, Minus) {
 	Cal calc;
@@ -29,6 +31,7 @@ TEST(t1, SumSum) {
 	EXPECT_EQ(9, cal.getSumSum(2, 3, 4));
 	EXPECT_EQ(0, cal.getSumSum(-1, 0, 1));
 }
+
 
 int main() {
 	::testing::InitGoogleMock();
