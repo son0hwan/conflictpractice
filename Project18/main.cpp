@@ -3,6 +3,9 @@
 class Cal {
 public:
 	// 이곳에 코드 작성
+	int getGop(int a, int b) {
+		return a * b;
+
 	int getZegop(int a) {
 		return a * a;
 
@@ -24,6 +27,11 @@ TEST(conflicttest, zegoptest2) {
 	int expected = 1764;
 	int actual = cal.getZegop(42);
 	EXPECT_EQ(expected, actual);
+}
+
+TEST(t1, gopTest) {
+	Cal cal;
+	EXPECT_EQ(6, cal.getGop(2,3));
 }
 
 int main() {
