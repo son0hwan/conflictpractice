@@ -3,6 +3,9 @@
 class Cal {
 public:
 	// 이곳에 코드 작성
+	int getGop(int a, int b) {
+		return a * b;
+	}
 };
 
 //테스트 케이스 작성
