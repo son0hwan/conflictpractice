@@ -2,12 +2,16 @@
 
 class Cal {
 public:
-	// 이곳에 코드 작성
+	int getDivide(int a, int b) {
+		return a / b;
+	}
 };
 
-//테스트 케이스 작성
-TEST(t1, t2) {
-	EXPECT_EQ(1, 1);
+TEST(TS, TC_DEVIDE) {
+	Cal cal;
+	int expect = 5;
+	int actual = cal.getDivide(10, 2);
+	EXPECT_EQ(expect, actual);
 }
 
 int main() {
